@@ -1,67 +1,67 @@
-# Copilot Instructions — analise-tesouro-direto
+# Instruções do Copilot — analise-tesouro-direto
 
-## Project Overview
+## Visão Geral do Projeto
 
-This project is an academic data analysis work for the *Análise de Dados e Boas Práticas* specialisation at PUC. It uses the **Taxas dos Títulos Ofertados pelo Tesouro Direto** dataset to demonstrate the full data-science pipeline from problem definition through exploratory analysis and pre-processing.
+Este projeto é um trabalho acadêmico de análise de dados para a especialização em *Análise de Dados e Boas Práticas* da PUC. Ele utiliza o conjunto de dados **Taxas dos Títulos Ofertados pelo Tesouro Direto** para demonstrar o pipeline completo de ciência de dados, desde a definição do problema até a análise exploratória e pré-processamento.
 
-## Repository Layout
+## Estrutura do Repositório
 
 ```
 analise-tesouro-direto/
-├── analise_tesouro_direto.ipynb   # Main Google Colab notebook (report)
+├── analise_tesouro_direto.ipynb   # Notebook principal do Google Colab (relatório)
 ├── .github/
-│   └── copilot-instructions.md   # This file
+│   └── copilot-instructions.md   # Este arquivo
 ├── README.md
 ├── LICENSE
 └── .gitignore
 ```
 
-## Language & Runtime
+## Linguagem e Ambiente de Execução
 
-- **Language:** Python 3.x
-- **Primary runtime:** Google Colab (Jupyter-compatible)
-- **Key libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
+- **Linguagem:** Python 3.x
+- **Ambiente principal:** Google Colab (compatível com Jupyter)
+- **Bibliotecas principais:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
 
-## Coding Conventions
+## Convenções de Codificação
 
-- Follow **PEP 8** style guide throughout all code cells.
-- Use **snake_case** for variables and function names.
-- Prefer **f-strings** over `%` or `.format()` for string interpolation.
-- Each logical step lives in its own code cell.
-- Every code cell is preceded by a **Markdown cell** that explains in Portuguese what the cell does and why.
-- Do **not** hard-code local file paths; load data directly from the public URL:
+- Seguir o guia de estilo **PEP 8** em todas as células de código.
+- Usar **snake_case** para nomes de variáveis e funções.
+- Preferir **f-strings** em vez de `%` ou `.format()` para interpolação de strings.
+- Cada etapa lógica deve estar em sua própria célula de código.
+- Toda célula de código deve ser precedida por uma **célula Markdown** que explica em português o que a célula faz e por quê.
+- **Não** usar caminhos de arquivos locais codificados; carregar dados diretamente da URL pública:
   ```
   https://www.tesourotransparente.gov.br/ckan/dataset/df56aa42-484a-4a59-8184-7676580c81e3/resource/796d2059-14e9-44e3-80c9-2d9e30b405c1/download/precotaxatesourodireto.csv
   ```
-- Separate display-only imports from functional imports.
-- Import all libraries at the top of the notebook in a single dedicated cell.
+- Separar imports apenas para exibição dos imports funcionais.
+- Importar todas as bibliotecas no topo do notebook em uma única célula dedicada.
 
-## Notebook Structure
+## Estrutura do Notebook
 
-1. **Capa / Título** — Title, author, institution, date.
-2. **Definição do Problema** — Context, objectives, hypotheses, attribute definitions.
-3. **Carregamento dos Dados** — Load CSV from URL, first inspection.
+1. **Capa / Título** — Título, autor, instituição, data.
+2. **Definição do Problema** — Contexto, objetivos, hipóteses, definições de atributos.
+3. **Carregamento dos Dados** — Carregar CSV da URL, primeira inspeção.
 4. **Análise Exploratória**
-   - Descriptive statistics (shape, dtypes, `describe()`, missing values)
-   - Visualisations with analysis paragraphs after each chart
+   - Estatísticas descritivas (shape, dtypes, `describe()`, valores ausentes)
+   - Visualizações com parágrafos de análise após cada gráfico
 5. **Pré-processamento**
-   - Type conversions, missing-value treatment, normalisation, standardisation, discretisation, one-hot encoding
-6. **Conclusão** — Summary of findings and next steps.
+   - Conversões de tipo, tratamento de valores ausentes, normalização, padronização, discretização, one-hot encoding
+6. **Conclusão** — Resumo das descobertas e próximos passos.
 
-## Chart Style
+## Estilo dos Gráficos
 
-- Use `matplotlib` and `seaborn` for all charts.
-- Set `seaborn` style to `"whitegrid"` and the `"muted"` palette globally at the start.
-- Always label axes and set a descriptive `title`.
-- After every chart, write a Markdown analysis paragraph (in Portuguese) summarising the key findings.
+- Usar `matplotlib` e `seaborn` para todos os gráficos.
+- Definir o estilo do `seaborn` como `"whitegrid"` e a paleta `"muted"` globalmente no início.
+- Sempre rotular os eixos e definir um `title` descritivo.
+- Após cada gráfico, escrever um parágrafo de análise em Markdown (em português) resumindo as principais descobertas.
 
-## Documentation Language
+## Idioma da Documentação
 
-All Markdown/text cells must be written in **Brazilian Portuguese**. Code comments may be in English or Portuguese — remain consistent within a file.
+Todas as células Markdown/texto devem ser escritas em **português brasileiro**. Comentários no código podem estar em inglês ou português — manter consistência dentro de um arquivo.
 
-## Data Notes
+## Notas sobre os Dados
 
-- The CSV uses semicolons (`;`) as separators and commas (`,`) as decimal separators.
-- Date columns (`Data Vencimento`, `Data Base`) must be parsed as `datetime` objects.
-- Numeric columns (`Taxa Compra Manha`, etc.) must be cast to `float` after replacing `,` with `.`.
-- The dataset contains bonds of multiple types (`Tipo Titulo`) spanning many years; always filter or group by bond type before time-series analysis.
+- O CSV usa ponto e vírgula (`;`) como separadores e vírgulas (`,`) como separadores decimais.
+- Colunas de data (`Data Vencimento`, `Data Base`) devem ser analisadas como objetos `datetime`.
+- Colunas numéricas (`Taxa Compra Manha`, etc.) devem ser convertidas para `float` após substituir `,` por `.`.
+- O conjunto de dados contém títulos de múltiplos tipos (`Tipo Titulo`) abrangendo muitos anos; sempre filtrar ou agrupar por tipo de título antes da análise de séries temporais.
