@@ -2,7 +2,7 @@
 
 ## Visão Geral do Projeto
 
-Este projeto é um trabalho acadêmico de análise de dados para a especialização em *Análise de Dados e Boas Práticas* da PUC. Ele utiliza o conjunto de dados **Taxas dos Títulos Ofertados pelo Tesouro Direto** para demonstrar o pipeline completo de ciência de dados, desde a definição do problema até a análise exploratória e pré-processamento.
+Este projeto é um trabalho acadêmico de análise de dados escrito em português para a especialização em *Análise de Dados e Boas Práticas* da PUC. Ele utiliza o conjunto de dados **Taxas dos Títulos Ofertados pelo Tesouro Direto** para demonstrar o pipeline completo de ciência de dados, desde a definição do problema até a análise exploratória e pré-processamento.
 
 ## Estrutura do Repositório
 
