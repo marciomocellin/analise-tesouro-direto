@@ -41,11 +41,11 @@ analise-tesouro-direto/
 1. **Capa / Título** — Título, autor, instituição, data.
 2. **Definição do Problema** — Contexto, objetivos, hipóteses, definições de atributos.
 3. **Carregamento dos Dados** — Carregar CSV da URL, primeira inspeção.
-4. **Análise Exploratória**
+4. **Pré-processamento**
+   - Conversões de tipo, tratamento de valores ausentes, normalização, padronização, discretização, one-hot encoding
+5. **Análise Exploratória**
    - Estatísticas descritivas (shape, dtypes, `describe()`, valores ausentes)
    - Visualizações com parágrafos de análise após cada gráfico
-5. **Pré-processamento**
-   - Conversões de tipo, tratamento de valores ausentes, normalização, padronização, discretização, one-hot encoding
 6. **Conclusão** — Resumo das descobertas e próximos passos.
 
 ## Estilo dos Gráficos
